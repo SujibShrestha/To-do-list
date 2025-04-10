@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Wix Madefor Display", sans-serif;
+}
+body {
+    min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(190deg, #5a71ab, #2b50aa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo {
+  background-color: #e2efde;
+  width: 50%;
+  height: 80%;
+  border-radius: 30px;
+  box-shadow: 0px 3px 11px 1px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ h1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#tasks{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 15px;
+
+    font-size: 15px;
+}
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.fixImg {
+  width: 30px;
+  height: 30px;
+  display: inline;
+}
+.li {
+  display: inline;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  background-image: url("svg/unchecked.svg");
+}
+ul li.checked::before {
+  background-image: url("svg/checked.svg");
+}
+ul li {
+  list-style-type: none;
+  font-size: 17px;
+  padding: 10px 8px 12px 50px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  left: 18px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
