@@ -109,3 +109,9 @@ ul:last-child{
   margin-bottom: 30px;
 }
 
+@media screen and (max-width:900px){
+  .todo{
+    height: 80%;
+    width: 80%;
+  }
+}
